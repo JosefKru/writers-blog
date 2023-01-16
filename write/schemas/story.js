@@ -35,12 +35,6 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'content',
-      title: 'Content',
-      type: 'blockContent',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       title: 'Body content',
       name: 'body',
       type: 'array',
@@ -62,15 +56,15 @@ export default defineType({
     }),
   ],
 
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
+  // preview: {
+  //   select: {
+  //     title: 'title',
+  //     author: 'author.name',
+  //     media: 'mainImage',
+  //   },
+  //   prepare(selection) {
+  //     const {author} = selection
+  //     return {...selection, subtitle: author && `by ${author}`}
+  //   },
+  // },
 })

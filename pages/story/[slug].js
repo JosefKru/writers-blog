@@ -18,7 +18,7 @@ const Story = ({ story }) => {
           {story.title}
         </h1>
         <p className='self-start -ml-6 md:ml-4 font-mono mb-10'>{date}</p>
-        <Content body={story.content} />
+        <Content body={story.body} />
       </div>
     </Article>
   )
